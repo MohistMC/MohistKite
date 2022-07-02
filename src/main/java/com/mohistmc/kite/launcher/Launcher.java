@@ -1,6 +1,6 @@
-package cn.mohistmc.kite.launcher;
+package com.mohistmc.kite.launcher;
 
-import cn.mohistmc.kite.MohistKiteAgent;
+import com.mohistmc.kite.MohistKiteAgent;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.nio.file.Paths;

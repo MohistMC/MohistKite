@@ -1,4 +1,4 @@
-package cn.mohistmc.kite.plugin;
+package com.mohistmc.kite.plugin;
 
 import java.util.Collections;
 import java.util.List;

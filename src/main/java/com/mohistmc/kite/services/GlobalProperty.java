@@ -1,4 +1,4 @@
-package cn.mohistmc.kite.services;
+package com.mohistmc.kite.services;
 
 import java.util.HashMap;
 import java.util.Map;

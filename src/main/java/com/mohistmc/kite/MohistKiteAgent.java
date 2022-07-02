@@ -1,6 +1,6 @@
-package cn.mohistmc.kite;
+package com.mohistmc.kite;
 
-import cn.mohistmc.kite.services.MixinService;
+import com.mohistmc.kite.services.MixinService;
 import com.google.common.io.ByteStreams;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -161,7 +161,7 @@ public final class MohistKiteAgent {
                              * {@code
                              *
                              * public static void main(String[] args){
-                             *     cn.apisium.papershelled.launcher.Launcher.launch(args);
+                             *     com.mohistmc.kite.launcher.Launcher.launch(args);
                              * }
                              *
                              * }
@@ -174,7 +174,7 @@ public final class MohistKiteAgent {
                                 v.visitLabel(l0);
                                 v.visitLineNumber(0, l0);//Trick JVM
                                 v.visitVarInsn(Opcodes.ALOAD, 0);
-                                v.visitMethodInsn(Opcodes.INVOKESTATIC, "cn/mohistmc/kite/launcher/Launcher", "launch", "([Ljava/lang/String;)V", false);
+                                v.visitMethodInsn(Opcodes.INVOKESTATIC, "com/mohistmc/kite/launcher/Launcher", "launch", "([Ljava/lang/String;)V", false);
                                 Label l1 = new Label();
                                 v.visitLabel(l1);
                                 v.visitLineNumber(0, l1);
@@ -190,7 +190,7 @@ public final class MohistKiteAgent {
                 }, ClassReader.EXPAND_FRAMES);
                 return cw.toByteArray();
             } else if ("org/bukkit/craftbukkit/Main".equals(className)) {
-                data = inject(data, "main", "cn/mohistmc/kite/MohistKiteAgent", "init");
+                data = inject(data, "main", "com/mohistmc/kite/MohistKiteAgent", "init");
                 URL url = Objects.requireNonNull(loader.getResource("org/bukkit/craftbukkit/Main.class"));
                 try {
                     serverJar = Paths.get(new URI(url.getFile().split("!", 2)[0]));
@@ -212,7 +212,7 @@ public final class MohistKiteAgent {
                     e.printStackTrace();
                 }
             } else if (className.startsWith("org/bukkit/craftbukkit/v1_") && className.endsWith("/CraftServer")) {
-                data = inject(data, "loadPlugins", "cn/mohistmc/kite/MohistKite", "injectPlugins");
+                data = inject(data, "loadPlugins", "com/mohistmc/kite/MohistKite", "injectPlugins");
                 if (obcVersion == null) {
                     obcVersion = className.substring(23).split("/", 2)[0];
                     obcClassName = "org/bukkit/craftbukkit/" + obcVersion + "/";

@@ -1,4 +1,4 @@
-package cn.mohistmc.kite;
+package com.mohistmc.kite;
 
 import java.util.Collection;
 import org.spongepowered.asm.launch.platform.IMixinPlatformServiceAgent;

@@ -1,9 +1,9 @@
-package cn.mohistmc.kite.services;
+package com.mohistmc.kite.services;
 
-import cn.mohistmc.kite.MixinPlatformAgent;
-import cn.mohistmc.kite.MohistKite;
-import cn.mohistmc.kite.MohistKiteAgent;
-import cn.mohistmc.kite.MohistKiteLogger;
+import com.mohistmc.kite.MixinPlatformAgent;
+import com.mohistmc.kite.MohistKite;
+import com.mohistmc.kite.MohistKiteAgent;
+import com.mohistmc.kite.MohistKiteLogger;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,6 @@
-package cn.mohistmc.kite.plugin;
+package com.mohistmc.kite.plugin;
 
-import cn.mohistmc.kite.MohistKiteAgent;
+import com.mohistmc.kite.MohistKiteAgent;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileNotFoundException;

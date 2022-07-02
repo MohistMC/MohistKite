@@ -7,7 +7,7 @@ plugins {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-group 'cn.mohistmc.kite'
+group 'com.mohistmc.kite'
 def psVersion = version = System.getenv('RELEASE_VERSION') ?: '0.0.0-DEV'
 
 repositories {
@@ -39,14 +39,14 @@ jar {
         attributes 'Implementation-Vendor': sdf.format(new Date())
         attributes 'Can-Redefine-Classes': 'true'
         attributes 'Can-Retransform-Classes': 'true'
-        attributes 'Agent-Class': 'cn.mohistmc.kite.MohistKiteAgent'
-        attributes 'Premain-Class': 'cn.mohistmc.kite.MohistKiteAgent'
-        attributes 'Main-Class': 'cn.mohistmc.kite.launcher.Launcher'
+        attributes 'Agent-Class': 'com.mohistmc.kite.MohistKiteAgent'
+        attributes 'Premain-Class': 'com.mohistmc.kite.MohistKiteAgent'
+        attributes 'Main-Class': 'com.mohistmc.kite.launcher.Launcher'
     }
 }
 
 shadowJar {
-    relocate 'com.google.common', 'cn.mohistmc.kite.guava'
+    relocate 'com.google.common', 'com.mohistmc.kite.guava'
     archiveClassifier.set('')
 }
 

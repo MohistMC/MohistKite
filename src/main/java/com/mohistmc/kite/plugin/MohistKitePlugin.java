@@ -1,6 +1,6 @@
-package cn.mohistmc.kite.plugin;
+package com.mohistmc.kite.plugin;
 
-import cn.mohistmc.kite.MohistKiteLogger;
+import com.mohistmc.kite.MohistKiteLogger;
 import com.google.common.base.Charsets;
 import java.io.File;
 import java.io.IOException;

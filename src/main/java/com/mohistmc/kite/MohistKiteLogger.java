@@ -1,4 +1,4 @@
-package cn.mohistmc.kite;
+package com.mohistmc.kite;
 
 import java.util.ArrayList;
 import java.util.Date;
